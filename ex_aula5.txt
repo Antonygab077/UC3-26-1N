@@ -1,0 +1,27 @@
+SELECT * FROM alunos;
+
+UPDATE alunos
+SET nome = 'Jose Aldo'
+WHERE id = 1;
+
+UPDATE alunos
+SET nome = 'Carlos Prates'
+WHERE id = 2;
+
+UPDATE turmas
+SET nome = 'TDS-ATUAL'
+WHERE id = 1;
+
+DELETE FROM alunos
+WHERE id = 4;
+
+SELECT * FROM alunos_turmas WHERE id_turma = 1;
+
+SELECT * FROM alunos_turmas WHERE id > 2;
+
+SELECT * FROM alunos
+ORDER BY nome ASC;
+
+SELECT * FROM alunos
+LIMIT 3;
+

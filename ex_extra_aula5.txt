@@ -1,0 +1,97 @@
+SELECT * FROM categoria;
+
+EX 1)
+
+UPDATE produto
+SET preco = 3699.90
+WHERE id = 1;
+
+UPDATE produto
+SET preco = 129.90
+WHERE nome = 'Mouse Gamer Redragon'
+
+UPDATE produto
+SET estoque = 20
+WHERE nome = 'Mouse Gamer Redragon'
+
+UPDATE produto
+SET categoria_id = 2
+WHERE nome = 'Mouse Gamer Redragon'
+
+EX 2)
+
+UPDATE cliente
+SET cidade = 'Sapucaia do Sul'
+WHERE id = 1;
+
+UPDATE cliente
+SET email = 'bruno.lima@email.com'
+WHERE id = 2;
+
+UPDATE pedido
+SET status = 'Enviado'
+WHERE id = 4;
+
+EX 3)
+
+DELETE FROM produto
+WHERE nome = 'Mousepad Speed';
+
+DELETE FROM pedido
+WHERE cliente_id = 8
+DELETE FROM cliente
+WHERE id = 8;
+
+DELETE FROM pedido
+WHERE status = 'Cancelado';
+
+EX 4)
+
+SELECT * FROM produto WHERE estoque < ;
+SELECT * FROM produto WHERE preco > 500;
+SELECT * FROM cliente WHERE cidade = 'Porto Alegre';
+SELECT * FROM pedido WHERE status = 'Pago'
+
+EX 5)
+
+SELECT * FROM produto ORDER BY nome ASC;
+SELECT * FROM produto ORDER BY preco DESC;
+SELECT * FROM cliente ORDER BY nome DESC;
+SELECT * FROM pedido ORDER BY data_pedido DESC;
+
+EX 6)
+
+SELECT * FROM produto LIMIT 3;
+SELECT * FROM cliente LIMIT 5;
+SELECT * FROM pedido ORDER BY valor_total DESC LIMIT 2;
+
+EX 7)
+
+SELECT * FROM produto WHERE estoque < 15 ORDER BY estoque ASC;
+SELECT * FROM pedido WHERE valor_total > 300 ORDER BY valor_total DESC;
+SELECT * FROM produto WHERE categoria_id = 1 ORDER BY nome ASC;
+
+DESAFIO)
+
+UPDATE produto
+SET preco = 289.90
+WHERE nome = 'Headset HyperX';
+
+UPDATE produto
+SET estoque = 6
+WHERE nome = 'Impressora Multifuncional';
+
+UPDATE cliente
+SET cidade = 'São Leopoldo'
+WHERE nome = 'Felipe Costa';
+
+UPDATE pedido
+SET status = 'Pago'
+WHERE id = 6;
+
+DELETE FROM produto
+WHERE nome = 'Controle Xbox';
+
+SELECT * FROM produto ORDER BY preco DESC;
+SELECT * FROM pedido WHERE valor_total > 300;
+SELECT * FROM cliente ORDER BY nome ASC LIMIT 5;

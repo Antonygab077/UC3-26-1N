@@ -1,0 +1,51 @@
+
+EX 1)
+
+CREATE TABLE Professor (
+	id SERIAL PRIMARY KEY,
+	nome VARCHAR(50) NOT NULL,
+	email VARCHAR(255) NOT NULL UNIQUE,
+	especialidade VARCHAR(30)
+);
+
+EX 2)
+
+CREATE TABLE Disciplina (
+	id SERIAL PRIMARY KEY,
+	nome VARCHAR(50) NOT NULL,
+	carga_horaria VARCHAR(10) NOT NULL
+);
+
+EX 3)
+
+CREATE TABLE Curso (
+	id SERIAL PRIMARY KEY,
+	nome VARCHAR(50) NOT NULL,
+	descricao VARCHAR(255) NOT NULL
+);
+
+
+DESAFIO)
+
+CREATE TABLE Livro (
+	id SERIAL PRIMARY KEY,
+	titulo VARCHAR(50) NOT NULL,
+	ano_publicacao INT NOT NULL
+);
+
+CREATE TABLE Autor (
+	id SERIAL PRIMARY KEY,
+	nome VARCHAR(50) NOT NULL,
+	nacionalidade VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE Autoria (
+	id SERIAL PRIMARY KEY,
+	livro_id INT,
+	CONSTRAINT fk_livro_autor
+	FOREIGN KEY (livro_id) REFERENCES Livro(id),
+	autor_id INT,
+	CONSTRAINT fk_autor_livro
+	FOREIGN KEY (autor_id) REFERENCES Autor(id)
+);
+

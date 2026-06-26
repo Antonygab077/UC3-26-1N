@@ -1,0 +1,24 @@
+EX 1)
+INSERT INTO professores (nome, email)
+VALUES ('Daniel', 'danieluc3@banco.com'),
+('Leo Barbosa', 'leouc2@js.com'),
+('Leo Souza', 'leouc5@ingles.com'),
+('Eder', 'eder@slaquemeh.com'),
+('Dalvana', 'dalvana@chefia.com');
+
+SELECT * FROM professores;
+
+EX 2)
+INSERT INTO disciplinas (nome, id_turma)
+VALUES ('Matematica', 1),
+('Portugues', 2),
+('Geografia', 3),
+('Historia', 4),
+('Quimica', 5);
+
+SELECT nome FROM disciplinas;
+
+EX 3)
+SELECT email FROM professores;
+SELECT nome FROM alunos;
+SELECT nome FROM turmas;
